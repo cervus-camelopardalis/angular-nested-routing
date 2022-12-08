@@ -1,0 +1,24 @@
+<div id="header-wrapper">
+    <div class="max-width">
+        <mat-toolbar>
+            <button mat-button routerLink="/dashboard" routerLinkActive="active" class="fs-5 me-3">My app</button>
+            <button mat-button routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+            <span class="example-spacer"></span>
+
+            <!-- Show when user is signed out -->
+            <button *ngIf="!authService.signedIn()" mat-button routerLink="/sign-in" routerLinkActive="active" class="btn-sign-in me-2">Sign in</button>
+            <button *ngIf="!authService.signedIn()" mat-stroked-button routerLink="/sign-up" routerLinkActive="active" class="btn-sign-up">Sign up</button>
+            
+            <!-- Show when user is signed in -->            
+            <button *ngIf="authService.signedIn()" mat-button [matMenuTriggerFor]="beforeMenu">
+                <mat-icon *ngIf="authService.signedIn()">account_circle</mat-icon>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                    <button mat-menu-item routerLink="/profile/my-profile" routerLinkActive="active">My profile</button>
+                    <button mat-menu-item routerLink="/profile/edit-profile" routerLinkActive="active">Edit profile</button>
+                    <button mat-menu-item routerLink="/profile/settings" routerLinkActive="active">Settings</button>
+                    <button mat-menu-item routerLink="/sign-out-successful" routerLinkActive="active" (click)="authService.signOut()">Sign out <mat-icon>exit_to_app</mat-icon></button>
+                </mat-menu>
+            </button>
+        </mat-toolbar>
+    </div>
+</div>

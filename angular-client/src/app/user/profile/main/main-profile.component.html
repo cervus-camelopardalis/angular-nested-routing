@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center" id="profile-wrapper">
+    <div>
+        <mat-drawer-container class="example-container">
+            <mat-drawer mode="side" opened class="ps-4 pe-5 py-4">
+                <button mat-button class="mb-2" routerLink="/profile/my-profile" routerLinkActive="active">My profile</button>
+                <button mat-button class="mb-2" routerLink="/profile/edit-profile" routerLinkActive="active">Edit profile</button>
+                <button mat-button class="mb-2" routerLink="/profile/settings" routerLinkActive="active">Settings</button>
+                <button mat-button class="mb-4" routerLink="/profile/delete-profile" routerLinkActive="active">Delete profile</button>
+            </mat-drawer>
+
+            <mat-drawer-content class="px-5 py-4">
+                <router-outlet></router-outlet>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </div>
+</div>
