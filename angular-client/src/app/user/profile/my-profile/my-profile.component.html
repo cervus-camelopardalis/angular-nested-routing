@@ -1,0 +1,17 @@
+<h1 class="mb-4">My profile</h1>
+
+<mat-icon class="profile-img">account_circle</mat-icon>
+
+<div *ngIf="displayUserData" class="mt-3">
+    <b>User id</b>
+    <div class="mt-1">{{ displayUserData.user.id }}</div> <!-- (4) Show user id -->
+    <br>
+
+    <b>User e-mail</b>
+    <div class="mt-1">{{ displayUserData.user.email }}</div> <!-- (4) Show user e-mail -->
+    <br>
+
+    <b>User password</b>
+    <div class="mt-1">{{ displayUserData.user.password }}</div> <!-- (4) Show user password -->
+    <br>
+</div>

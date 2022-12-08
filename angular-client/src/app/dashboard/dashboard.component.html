@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-center" id="dashboard-wrapper">
+    <div>
+        <div class="mt-5 text-center">Dashboard</div>
+        
+        <div *ngIf="displayUserData" class="mt-5 pt-5 text-center">
+            <div class="display-1">Welcome</div>
+            <div class="mt-4 fs-5">{{ displayUserData.user.email }}</div> <!-- (4) Show user e-mail -->
+        </div>
+    </div>
+</div>

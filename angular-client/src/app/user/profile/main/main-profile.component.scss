@@ -1,0 +1,30 @@
+#profile-wrapper {
+    min-height: calc(100vh - 64px - 64px);
+
+    mat-drawer-container {
+        width: 900px;
+        height: 500px;
+        background-color: #FFFFFF;
+        border-radius: 12px;
+    
+        mat-drawer {
+            background-color: #FAFAFA;
+            border: none;
+            border-radius: 12px;
+
+            button {
+                display: block;
+
+                &:last-child {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+
+        mat-drawer-content {
+            background-color: #FFFFFF;
+            margin-left: 250px !important;
+        }
+    }
+}
